@@ -1,66 +1,33 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Nest
+## the greatest virtual pet since the Tamagotchi
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
 
-## About Laravel
+This interactive API allows you to create a virtual bird that you can assign a name to, feed, and walk. Make sure you don't feed them too much or walk them too much, or they will die! You can always check to see if they are hungry and to make sure if they are alive before attempting to walk or feed them.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Below are a list of available routes for thsi application
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+  GET|HEAD  / ......................................................................... generated::saU0gAs7zWozs5Zl
+  POST      _ignition/execute-solution ignition.executeSolution › Spatie\LaravelIgnition › ExecuteSolutionControll…
+  GET|HEAD  _ignition/health-check .......... ignition.healthCheck › Spatie\LaravelIgnition › HealthCheckController
+  POST      _ignition/update-config ....... ignition.updateConfig › Spatie\LaravelIgnition › UpdateConfigController
+  GET|HEAD  api/birds ...................................... generated::X2ZACPNoPGKGFLlZ › BirdsApiController@index
+  POST      api/birds ..................................... generated::mWrqDWhRm16EWwwK › BirdsApiController@create
+  PUT       api/birds/{bird} .............................. generated::pQciEFYZjs5cteHp › BirdsApiController@update
+  DELETE    api/birds/{bird} .............................. generated::Bxxy7k5BmzpXxyCO › BirdsApiController@delete
+  PUT       api/birds/{bird}/drink ......................... generated::kno1DASvsTpBKQ2D › BirdsApiController@drink
+  PUT       api/birds/{bird}/eat ............................. generated::FdZdCbCWCDwPuywt › BirdsApiController@eat
+  PUT       api/birds/{bird}/excrete ..................... generated::xcMpl5EBRbz7GRdT › BirdsApiController@excrete
+  GET|HEAD  api/birds/{bird}/isAlive ..................... generated::1TrCQKdcqmerhQXD › BirdsApiController@isAlive
+  GET|HEAD  api/birds/{bird}/isHungry ................... generated::EfLu1gEe0OzVA17U › BirdsApiController@isHungry
+  PUT       api/birds/{bird}/walk ........................... generated::Qqb10JwTfyHGHw2M › BirdsApiController@walk
+  GET|HEAD  api/user .................................................................. generated::DLP2wi9SZ1uQE3OP
+  GET|HEAD  sanctum/csrf-cookie ................. sanctum.csrf-cookie › Laravel\Sanctum › CsrfCookieController@show
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+                                                                                                Showing [16] routes
 
-## Learning Laravel
+For any feature requests, just study up on the Laravel docs and start contributing!
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+"The Nest API has the grace of a swan, the wisdom of an owl, and the eye of an eagle... this API is for the birds!"
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+-Norm MacDonald
