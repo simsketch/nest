@@ -1,11 +1,11 @@
 # Nest
-## the greatest virtual pet since the Tamagotchi
+## The greatest virtual pet since the Tamagotchi
 
 
 This interactive API allows you to create a virtual bird that you can assign a name to, feed, and walk. Make sure you don't feed them too much or walk them too much, or they will die! You can always check to see if they are hungry and to make sure if they are alive before attempting to walk or feed them.
 
 Below are a list of available routes for thsi application
-
+```
   GET|HEAD  / ......................................................................... generated::saU0gAs7zWozs5Zl
   POST      _ignition/execute-solution ignition.executeSolution › Spatie\LaravelIgnition › ExecuteSolutionControll…
   GET|HEAD  _ignition/health-check .......... ignition.healthCheck › Spatie\LaravelIgnition › HealthCheckController
@@ -24,10 +24,10 @@ Below are a list of available routes for thsi application
   GET|HEAD  sanctum/csrf-cookie ................. sanctum.csrf-cookie › Laravel\Sanctum › CsrfCookieController@show
 
                                                                                                 Showing [16] routes
+```
 
 For any feature requests, just study up on the Laravel docs and start contributing!
 
-
-"The Nest API has the grace of a swan, the wisdom of an owl, and the eye of an eagle... this API is for the birds!"
+> "The Nest API has the grace of a swan, the wisdom of an owl, and the eye of an eagle... this API is for the birds!"
 
 -Norm MacDonald
