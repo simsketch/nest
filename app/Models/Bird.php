@@ -10,6 +10,10 @@ class Bird extends Model
     use HasFactory;
 
     protected $fillable = [
-        'name', 'description'
+        'name',
+        'description',
+        'isAlive',
+        'isHungry',
+        'bellySize',
     ];
 }

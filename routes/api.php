@@ -20,46 +20,22 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-// Route::get('/birds', function () {
-//     return Bird::all();
-// });
-
 Route::get('/birds', [BirdsApiController::class, 'index']);
-
-// Route::post('/birds', function () {
-//     request()->validate([
-//         'name' => 'required',
-//         'description' => 'required',
-//     ]);
-//     return Bird::create([
-//         'name' => request('name'),
-//         'description' => request('description'),
-//     ]);
-// });
 
 Route::post('/birds', [BirdsApiController::class, 'create']);
 
-// Route::put('/birds/{bird}', function(Bird $bird) {
-//     request()->validate([
-//         'name' => 'required',
-//         'description' => 'required',
-//     ]);
-//     $success = $bird->update([
-//         'name' => request('name'),
-//         'description' => request('description'),
-//     ]);
-//     return [
-//         'success' => $success
-//     ];
-// });
-
 Route::put('/birds/{bird}', [BirdsApiController::class, 'update']);
 
-// Route::delete('/birds/{bird}', function(Bird $bird) {
-//     $success = $bird->delete();
-//     return [
-//         'success' => $success
-//     ];
-// });
-
 Route::delete('/birds/{bird}', [BirdsApiController::class, 'delete']);
+
+Route::put('/birds/{bird}/walk', [BirdsApiController::class, 'walk']);
+
+Route::put('/birds/{bird}/drink', [BirdsApiController::class, 'drink']);
+
+Route::put('/birds/{bird}/eat', [BirdsApiController::class, 'eat']);
+
+Route::put('/birds/{bird}/excrete', [BirdsApiController::class, 'excrete']);
+
+Route::get('/birds/{bird}/isAlive', [BirdsApiController::class, 'isAlive']);
+
+Route::get('/birds/{bird}/isHungry', [BirdsApiController::class, 'isHungry']);
