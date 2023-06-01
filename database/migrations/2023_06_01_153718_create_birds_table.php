@@ -15,9 +15,9 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->text('description');
-            $table->boolean('isAlive')->default(true);
-            $table->boolean('isHungry')->default(true);
-            $table->integer('bellySize')->default(10);
+            $table->boolean('isAlive');
+            $table->boolean('isHungry');
+            $table->integer('bellySize');
             $table->timestamps();
         });
     }
