@@ -20,39 +20,46 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/birds', function () {
-    return Bird::all();
-});
+// Route::get('/birds', function () {
+//     return Bird::all();
+// });
 
 Route::get('/birds', [BirdsApiController::class, 'index']);
 
-Route::post('/birds', function () {
-    request()->validate([
-        'name' => 'required',
-        'description' => 'required',
-    ]);
-    return Bird::create([
-        'name' => request('name'),
-        'description' => request('description'),
-    ]);
-});
+// Route::post('/birds', function () {
+//     request()->validate([
+//         'name' => 'required',
+//         'description' => 'required',
+//     ]);
+//     return Bird::create([
+//         'name' => request('name'),
+//         'description' => request('description'),
+//     ]);
+// });
 
-Route::put('/birds/{bird}', function(Bird $bird) {
-    request()->validate([
-        'name' => 'required',
-        'description' => 'required',
-    ]);
-    $success = $bird->update([
-        'name' => request('name'),
-        'description' => request('description'),
-    ]);
-    return [
-        'success' => $success
-    ];
-});
-Route::delete('/birds/{bird}', function(Bird $bird) {
-    $success = $bird->delete();
-    return [
-        'success' => $success
-    ];
-});
+Route::post('/birds', [BirdsApiController::class, 'create']);
+
+// Route::put('/birds/{bird}', function(Bird $bird) {
+//     request()->validate([
+//         'name' => 'required',
+//         'description' => 'required',
+//     ]);
+//     $success = $bird->update([
+//         'name' => request('name'),
+//         'description' => request('description'),
+//     ]);
+//     return [
+//         'success' => $success
+//     ];
+// });
+
+Route::put('/birds/{bird}', [BirdsApiController::class, 'update']);
+
+// Route::delete('/birds/{bird}', function(Bird $bird) {
+//     $success = $bird->delete();
+//     return [
+//         'success' => $success
+//     ];
+// });
+
+Route::delete('/birds/{bird}', [BirdsApiController::class, 'delete']);
